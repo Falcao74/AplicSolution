@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 import { 
@@ -13,6 +13,7 @@ import {
   AppTitle,
   AppStatus
 } from './styles';
+import logoImg from '../../assets/logo.jpg';
 
 const Dashboard = () => {
   const { user, logout } = useContext(AuthContext);
@@ -61,7 +62,7 @@ const Dashboard = () => {
   return (
     <Container>
       <Header>
-        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src={logoImg} alt="AplicSolution Logo" />
         <Title>AplicSolution</Title>
         <LogoutButton onClick={handleLogout}>Sair</LogoutButton>
       </Header>

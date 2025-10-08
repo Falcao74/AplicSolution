@@ -1,6 +1,7 @@
-import { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AuthContext from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
+import logoImg from '../../assets/logo.jpg';
 import { 
   Container, 
   LoginContainer, 
@@ -9,8 +10,8 @@ import {
   Input, 
   Button, 
   ErrorMessage, 
-  LinkText,
-  LinksContainer
+  Links, 
+  Link 
 } from './styles';
 
 const Login = () => {
@@ -58,7 +59,7 @@ const Login = () => {
   return (
     <Container>
       <LoginContainer>
-        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src={logoImg} alt="AplicSolution Logo" />
         <h1>AplicSolution</h1>
         
         <Form onSubmit={handleSubmit}>
@@ -80,10 +81,10 @@ const Login = () => {
           
           <Button type="submit">Entrar</Button>
           
-          <LinksContainer>
-            <LinkText onClick={() => navigate('/register')}>Criar conta</LinkText>
-            <LinkText onClick={() => navigate('/forgot-password')}>Esqueci minha senha</LinkText>
-          </LinksContainer>
+          <Links>
+            <Link onClick={() => navigate('/register')}>Criar conta</Link>
+            <Link onClick={() => navigate('/forgot-password')}>Esqueci minha senha</Link>
+          </Links>
         </Form>
       </LoginContainer>
     </Container>

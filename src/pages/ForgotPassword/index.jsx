@@ -1,16 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Container, 
-  FormContainer, 
-  Logo, 
-  Form, 
-  Input, 
-  Button, 
-  ErrorMessage, 
-  SuccessMessage,
-  BackLink
-} from './styles';
+import { Container, FormContainer, Logo, Form, Input, Button, ErrorMessage, SuccessMessage, BackLink } from './styles';
+import logoImg from '../../assets/logo.jpg';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -47,7 +38,7 @@ const ForgotPassword = () => {
   return (
     <Container>
       <FormContainer>
-        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src={logoImg} alt="AplicSolution Logo" />
         <h1>Recuperar Senha</h1>
         
         <Form onSubmit={handleSubmit}>

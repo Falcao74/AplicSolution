@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
   Container, 
@@ -11,6 +11,7 @@ import {
   LinkText,
   BackLink
 } from './styles';
+import logoImg from '../../assets/logo.jpg';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -69,7 +70,7 @@ const Register = () => {
   return (
     <Container>
       <FormContainer>
-        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src={logoImg} alt="AplicSolution Logo" />
         <h1>Criar Conta</h1>
         
         <Form onSubmit={handleSubmit}>
