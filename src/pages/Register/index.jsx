@@ -69,7 +69,7 @@ const Register = () => {
   return (
     <Container>
       <FormContainer>
-        <Logo src="/img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
         <h1>Criar Conta</h1>
         
         <Form onSubmit={handleSubmit}>

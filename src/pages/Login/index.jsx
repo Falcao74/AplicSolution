@@ -58,7 +58,7 @@ const Login = () => {
   return (
     <Container>
       <LoginContainer>
-        <Logo src="/img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
         <h1>AplicSolution</h1>
         
         <Form onSubmit={handleSubmit}>

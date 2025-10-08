@@ -61,7 +61,7 @@ const Dashboard = () => {
   return (
     <Container>
       <Header>
-        <Logo src="/img/logo.jpg" alt="AplicSolution Logo" />
+        <Logo src="./img/logo.jpg" alt="AplicSolution Logo" />
         <Title>AplicSolution</Title>
         <LogoutButton onClick={handleLogout}>Sair</LogoutButton>
       </Header>
